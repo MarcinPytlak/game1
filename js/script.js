@@ -27,3 +27,32 @@ if(playerInput == '1'){
     playerMove = 'nożyce';
 }
 printMessage('Twój ruch to: ' + playerMove)
+
+if( computerMove =='kamień' && playerMove == 'papier'){
+    printMessage('Ty wygrywasz!');
+}else if(computerMove =='kamień' && playerMove == 'nożyce'){
+    printMessage('Przgrałeś! Spróbuj raz jeszcze oszukać skrypt :)');
+}else if (computerMove =='kamień' && playerMove == 'kamień'){
+    printMessage('Mamy remis!')
+}else if(computerMove == 'kamień' && playerMove == 'nieznany ruch'){
+    printMessage('uhuhu! Próbowałeś oszukać Freda, teraz Fred oszuka Ciebie :D')
+}
+
+if( computerMove =='papier' && playerMove == 'papier'){
+    printMessage('Mamy remis!');
+}else if(computerMove =='papier' && playerMove == 'kamień'){
+    printMessage('Przgrałeś! Spróbuj raz jeszcze oszukać skrypt :)');
+}else if (computerMove =='papier' && playerMove == 'nożyce'){
+    printMessage('Ty wygrywasz!')
+}else if(computerMove == 'papier' && playerMove == 'nieznany ruch'){
+    printMessage('uhuhu! Próbowałeś oszukać Freda, teraz Fred oszuka Ciebie :D')
+}
+if( computerMove =='nożyce' && playerMove == 'nożyce'){
+    printMessage('Mamy remis!');
+}else if(computerMove =='nożyce' && playerMove == 'papier'){
+    printMessage('Przgrałeś! Spróbuj raz jeszcze oszukać skrypt :)');
+}else if (computerMove =='nożyce' && playerMove == 'kamień'){
+    printMessage('Ty wygrywasz!')
+}else if(computerMove == 'nożyce' && playerMove == 'nieznany ruch'){
+    printMessage('uhuhu! Próbowałeś oszukać Freda, teraz Fred oszuka Ciebie :D')
+}
