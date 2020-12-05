@@ -1,0 +1,52 @@
+.container {
+    background-color: cornsilk;
+    height: 100vh;
+
+    h1 {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: oblique;
+        text-transform: uppercase;
+    }
+    p {
+        margin: 30px;
+        padding: 20px;
+        font-size: 20px;
+    }
+    h3 {
+        height: 100px;
+        text-align: center;
+        top: 10px;
+        background-size: contain;
+        background-image: url(https://lh3.googleusercontent.com/proxy/gLe3UKhHRg19JR7blMaQV1Q-n9OL4uZUUr3iAXrR9weEanTS_BIm9KYbNpDNsK1VC4drbxC0zGtz6J7Pww7G0gsqRKHNpGon6-m9TsKPGcWznNE);
+    }
+}
+.btn {
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    transition: all .6s;
+    cursor: pointer;
+    }
+.btn1 {
+    background-image: url(https://samequizy.pl/wp-content/uploads/2018/10/filing_images_38c24349c767.jpg);
+}
+.btn2 {
+    background-image: url(https://samequizy.pl/wp-content/uploads/2018/10/filing_images_349c767ff7a8.jpg);
+}
+.btn3 {
+    background-image: url(https://samequizy.pl/wp-content/uploads/2018/10/filing_images_738db78e54ce.jpg);
+}
+.btn:hover {
+    opacity: .4;
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.message {
+    font-size: 30px;
+    padding-top: 20px;
+    margin-top: 30px;
+    text-align: center;
+}

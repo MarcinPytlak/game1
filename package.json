@@ -22,7 +22,6 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.26.3",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.11.0",
