@@ -1,3 +1,5 @@
+let computerCount = 0;
+let playerCount = 0;
 function playGame(playerInput){
     clearMessages();
     function getMoveName(MoveID){
@@ -19,18 +21,32 @@ function playGame(playerInput){
     if( computerMove === playerMove){
         printMessage('Mamy remis!');
         console.log('wykonała się 1 zależność, czyli remis ')
+        countResults(playerCount, computerCount);
     }else if(computerMove =='kamień' && playerMove == 'nożyce'){
         printMessage('Przegrałeś! Spróbuj raz jeszcze oszukać skrypt :)');
+        computerCount +=1;
+        countResults(playerCount, computerCount);
     }else if(computerMove =='kamień' && playerMove =='papier'){
         printMessage('Gratuluje! Wygrałeś');
+        playerCount +=1;
+        countResults(playerCount, computerCount);
+        console.log('gracz otrzymuje punkt' + playerCount)
     }else if(computerMove =='papier' && playerMove == 'kamień'){
         printMessage('Przegrałeś! Spróbuj raz jeszcze oszukać skrypt :)');
+        computerCount +=1;
+        countResults(playerCount, computerCount);
     }else if (computerMove =='papier' && playerMove == 'nożyce'){
         printMessage('Ty wygrywasz!');
+        playerCount +=1;
+        countResults(playerCount, computerCount);
     }else if(computerMove =='nożyce' && playerMove == 'papier'){
         printMessage('Przegrałeś! Spróbuj raz jeszcze oszukać skrypt :)');
+        computerCount +=1;
+        countResults(playerCount, computerCount);
     }else if (computerMove =='nożyce' && playerMove == 'kamień'){
         printMessage('Ty wygrywasz!');
+        playerCount +=1;
+        countResults(playerCount, computerCount);
     }else{
         printMessage('uhuhu! Próbowałeś oszukać Freda, teraz Fred oszuka Ciebie :D');
     }
@@ -60,3 +76,7 @@ document.getElementById('play-paper').addEventListener('click', function(){
 document.getElementById('play-scissors').addEventListener('click', function(){
     playGame(3);
 });
+function countResults(playerCount, computerCount){
+    document.getElementById('player').innerHTML = 'Twój wynik: '+ playerCount;
+    document.getElementById('computer').innerHTML ='-vs-' + computerCount + ' : Komputer';
+}

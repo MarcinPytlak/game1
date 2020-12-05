@@ -20,6 +20,10 @@
         background-size: contain;
         background-image: url(https://lh3.googleusercontent.com/proxy/gLe3UKhHRg19JR7blMaQV1Q-n9OL4uZUUr3iAXrR9weEanTS_BIm9KYbNpDNsK1VC4drbxC0zGtz6J7Pww7G0gsqRKHNpGon6-m9TsKPGcWznNE);
     }
+    h2 {
+        text-align: center;
+        font-size: 40px;
+    }
 }
 .btn {
     height: 150px;
@@ -50,3 +54,11 @@
     margin-top: 30px;
     text-align: center;
 }
+#results {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+
+
+
