@@ -1,8 +1,11 @@
+{
 let computerCount = 0;
 let playerCount = 0;
-function playGame(playerInput){
+const playGame = function (playerInput){
+    console.log(playerInput);
     clearMessages();
-    function getMoveName(MoveID){
+    
+    const getMoveName = function (MoveID) {
         if(MoveID == 1){
             return 'kamień';
         }else if(MoveID == 2){
@@ -14,9 +17,18 @@ function playGame(playerInput){
         return ('nieznany ruch');
             }
     }
-        function displayResult(computerMove, playerMove){
-        console.log('moves: ', computerMove, playerMove)
-        printMessage('Zagrałem ' + computerMove + ', a Ty ' + playerMove);
+    const playerMove = getMoveName(playerInput),
+        randomNumber = Math.floor(Math.random() * 3 + 1),
+        computerMove = getMoveName(randomNumber);
+
+    console.log(playerMove);
+    console.log('Wylosowana liczba to: ' + randomNumber);
+    console.log('Gracz wpisał: ' + playerInput);
+
+    const displayResult = function (computerMove, playerMove){
+            
+    console.log('moves: ', computerMove, playerMove)
+    printMessage('Zagrałem ' + computerMove + ', a Ty ' + playerMove);
 
     if( computerMove === playerMove){
         printMessage('Mamy remis!');
@@ -52,18 +64,6 @@ function playGame(playerInput){
     }
     }
 
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
-
-    console.log('Wylosowana liczba to: ' + randomNumber);
-
-    let computerMove = getMoveName(randomNumber);
-
-    /*let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce');*/
-
-    console.log('Gracz wpisał: ' + playerInput);
-
-    let playerMove = getMoveName(playerInput);
-
     displayResult(computerMove, playerMove);
     console.log(getMoveName('2'));
 }
@@ -79,4 +79,5 @@ document.getElementById('play-scissors').addEventListener('click', function(){
 function countResults(playerCount, computerCount){
     document.getElementById('player').innerHTML = 'Twój wynik: '+ playerCount;
     document.getElementById('computer').innerHTML ='-vs-' + computerCount + ' : Komputer';
+}
 }
